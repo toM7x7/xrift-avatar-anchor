@@ -42,11 +42,15 @@ JSON中の `officialItemInjection: false` はCDN読込モードの選択を示�
 
 実アイテムIDのresolveは有効な最新版を返すため、バージョンを固定していない。画面/記録のv2表記は今回の検証時点を示す。再実験ではresolveのversionNumber・sceneUrlと実際の読込remoteEntryを照合し、更新されていれば新しい版の記録として残す。
 
-## 本番で残った停止点
+## 本番の追加確認
 
 実XRiftでは新規アイテムが有効になり、インベントリの1枠へ装備できた。v1のラベル画像URLがCDNルートを指す失敗を観測し、v2でアイテム配下の相対参照へ修正した。v2の配置プレビューとInteractableの生成を確認した。
 
-一方、本番Canvasのクリックで `WrongDocumentError: The root document of this element is not valid for pointer lock.` が発生。アイテムを読込む前から再現し、床へ照準を向ける配置操作が成立しなかった。ユーザーによる手動開始の可否を確認待ち。本番での配置・装着・追従・解除は未完了で、公式ローカルでの成功から推測しない。
+本番Canvasの自動クリックでは `WrongDocumentError: The root document of this element is not valid for pointer lock.` が発生した。その後、ユーザーから手動なら開始できたとの回答があり、2台配置と1台の頭上装着を観測した。初回の配置/装着クリックそのものは計測していない。
+
+通常のWキー600msで頭が約0.876m移動し、タグと頭の移動量の差は約0.066mmだった。停止後の頭領域上端との距離は約0.11988m。もう1台の状態はidleを保った。頭上タグはネイティブの鏡で観察したが、私有モデル画像はGitへ追加しない。[本番PC計測](native-tag-2026-10-25.json)
+
+自動操作での視点旋回用PointerLockは引き続き失敗しているため、解除ボタンの手動操作を依頼中。解除状態とタグ消失は確認待ち。公式ローカルの成功から本番の解除を推測しない。
 
 Quest、実複数人、他者視点、実VRM1、XRift本番IK、髪との接触、見た目の採用判定は未確認。今回のローカルVRM橋渡しはそれらを再現しない。
 

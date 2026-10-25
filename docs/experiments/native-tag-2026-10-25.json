@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-25",
+  "tier": "XRift production PC browser, manually assisted setup",
+  "itemId": "82fe0855-60d8-4880-9f88-f3c10276796c",
+  "publishedVersionAtTest": 2,
+  "setup": "User reported manual pointer lock worked. Two placed stations and one worn tag were observed after manual setup; those initial UI transitions were not instrumented.",
+  "checks": {
+    "twoPlacedItemsObserved": true,
+    "wornStateObserved": true,
+    "avatarHeadMeshCalibrated": true,
+    "keyboardWalkObserved": true,
+    "headTagFollowWithin1mm": true,
+    "otherPlacementIdle": true,
+    "detachObserved": null
+  },
+  "walk": {
+    "input": "CUA normal W key, 600 ms",
+    "pointerLockAtSnapshots": false,
+    "headTravelM": 0.8764765209114455,
+    "tagHeadDeltaErrorMm": 0.06557026796016885,
+    "headTopGapAfterM": 0.1198828434983712,
+    "before": {
+      "phase": "worn",
+      "source": "local-unclaimed-head",
+      "head": [
+        19.212303313379515,
+        1.5687287181054823,
+        20.74166214921043
+      ],
+      "position": [
+        19.214905606159164,
+        1.9204265979141597,
+        20.740980287060136
+      ],
+      "offset": [
+        0.0026022927796489626,
+        0.3516978798086774,
+        -0.0006818621502979738
+      ],
+      "calibration": {
+        "acceptedVertices": 3256,
+        "confidence": "sampled",
+        "headTopY": 1.8002954005985965,
+        "meshCount": 20,
+        "method": "head-skinned-vertices",
+        "sampledVertices": 6000
+      },
+      "calibrationAt": 1026.761800000044,
+      "followAt": 1027.059500000032,
+      "serial": 1,
+      "statusIndex": 0,
+      "extraHeight": 0
+    },
+    "after": {
+      "phase": "worn",
+      "source": "local-unclaimed-head",
+      "head": [
+        18.67055599398437,
+        1.5683287807163602,
+        21.430661984977675
+      ],
+      "position": [
+        18.673092716496058,
+        1.9200266605250371,
+        21.42998012282738
+      ],
+      "offset": [
+        0.0025367225116887937,
+        0.35169787980867717,
+        -0.0006818621502979738
+      ],
+      "calibration": {
+        "acceptedVertices": 3256,
+        "confidence": "sampled",
+        "headTopY": 1.800143817026666,
+        "meshCount": 20,
+        "method": "head-skinned-vertices",
+        "sampledVertices": 6000
+      },
+      "calibrationAt": 1044.8107000000264,
+      "followAt": 1045.0104000000144,
+      "serial": 1,
+      "statusIndex": 0,
+      "extraHeight": 0
+    },
+    "sameRuntimeBinding": true
+  },
+  "privateEvidence": "Ignored artifacts/native-tag-*-private.*; no model images or room identity committed",
+  "limitations": [
+    "One current native avatar; model file/hash and VRM generation not established in this native session.",
+    "Manual setup was necessary; automated pointer-lock requests still fail with WrongDocumentError.",
+    "Settled endpoint measurement does not measure live frame latency.",
+    "No Quest, other-user view, multiplayer, ride, or native nameplate overlap acceptance."
+  ]
+}
