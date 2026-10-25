@@ -11,7 +11,10 @@
     "keyboardWalkObserved": true,
     "headTagFollowWithin1mm": true,
     "otherPlacementIdle": true,
-    "detachObserved": null
+    "detachObserved": true,
+    "ownerCleared": true,
+    "tagHidden": true,
+    "equipControlRestored": true
   },
   "walk": {
     "input": "CUA normal W key, 600 ms",
@@ -84,6 +87,45 @@
       "extraHeight": 0
     },
     "sameRuntimeBinding": true
+  },
+  "detach": {
+    "method": "User pressed remove manually, then assistant read live scene diagnostics and visually checked the mirror.",
+    "userReportedRemoved": true,
+    "allPlacedItemsIdle": true,
+    "allOwnersCleared": true,
+    "allWornTagsHidden": true,
+    "equipControlsRestored": true,
+    "items": [
+      {
+        "controls": [
+          {
+            "effectivelyVisible": true,
+            "kind": "equip"
+          },
+          {
+            "effectivelyVisible": false,
+            "kind": "worn-remove"
+          }
+        ],
+        "ownerCleared": true,
+        "phase": "idle"
+      },
+      {
+        "controls": [
+          {
+            "effectivelyVisible": true,
+            "kind": "equip"
+          },
+          {
+            "effectivelyVisible": false,
+            "kind": "worn-remove"
+          }
+        ],
+        "ownerCleared": true,
+        "phase": "idle"
+      }
+    ],
+    "privateCapture": "Ignored artifacts/native-tag-detached-private.jpg"
   },
   "privateEvidence": "Ignored artifacts/native-tag-*-private.*; no model images or room identity committed",
   "limitations": [
