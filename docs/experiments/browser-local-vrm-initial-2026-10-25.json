@@ -1,0 +1,1051 @@
+{
+  "evidenceTier": "local-real-vrm-browser",
+  "runtime": "GLTFLoader + three-vrm raw humanoid simplified pose; no live XRift/Quest",
+  "modelCount": 3,
+  "checks": {
+    "parallelRendering": true,
+    "allModelsMoving": true,
+    "headTag": true,
+    "headHat": true,
+    "chestTag": true,
+    "leftHandItem": true,
+    "threeAvatarScales": true,
+    "noPageErrors": true,
+    "noNonGetRequests": true
+  },
+  "observations": [
+    {
+      "content": "tag",
+      "bone": "head",
+      "avatarScale": 0.65,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -1.7727394247635935,
+            0.9944307931874855,
+            0.136220020969224
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            0.1358485397251751,
+            0.743331916522181,
+            0.10858788344865657
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            2.0247904932375107,
+            1.1503178551698716,
+            0.14422519370849085
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "content": "tag",
+      "bone": "head",
+      "avatarScale": 1,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -1.7787887649569545,
+            1.4114319895192085,
+            0.15570881805811762
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            0.13442348810269011,
+            1.02512602541874,
+            0.1131978372572447
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            2.0174111088909,
+            1.6512582387228794,
+            0.16802446842622049
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "content": "tag",
+      "bone": "head",
+      "avatarScale": 1.35,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -1.7848381051503146,
+            1.8284331858509313,
+            0.1751976151470113
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            0.13299843648020515,
+            1.306920134315299,
+            0.11780779106583278
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            2.0100317245442887,
+            2.1521986222758875,
+            0.19182374314395015
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "content": "hat",
+      "bone": "head",
+      "avatarScale": 0.65,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -1.7923887754913372,
+            0.9378963702970344,
+            0.24976696331563963
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.2,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 4.2146848510894035e-8,
+          "worldScale": [
+            1,
+            1,
+            0.9999999999999998
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            0.11619918899743145,
+            0.6867974936317299,
+            0.2221348257950722
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.2,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 4.2146848510894035e-8,
+          "worldScale": [
+            1,
+            1,
+            0.9999999999999998
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            2.005141142509767,
+            1.0937834322794207,
+            0.2577721360549065
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.2,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 4.2146848510894035e-8,
+          "worldScale": [
+            1,
+            1,
+            0.9999999999999998
+          ]
+        }
+      ]
+    },
+    {
+      "content": "hat",
+      "bone": "head",
+      "avatarScale": 1,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -1.7984381156846982,
+            1.3548975666287575,
+            0.26925576040453325
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.2,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 2.9802322387695312e-8,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            0.11477413737494646,
+            0.9685916025282889,
+            0.22674477960366035
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.2,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 2.9802322387695312e-8,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            1.9977617581631562,
+            1.5947238158324284,
+            0.28157141077263614
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.2,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 2.9802322387695312e-8,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "content": "hat",
+      "bone": "head",
+      "avatarScale": 1.35,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -1.8044874558780584,
+            1.7718987629604803,
+            0.2887445574934269
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.2,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 4.2146848510894035e-8,
+          "worldScale": [
+            1,
+            1,
+            0.9999999999999998
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            0.1133490857524615,
+            1.250385711424848,
+            0.23135473341224844
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.2,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 4.2146848510894035e-8,
+          "worldScale": [
+            1,
+            1,
+            0.9999999999999998
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            1.9903823738165451,
+            2.0956641993854364,
+            0.3053706854903658
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.2,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 4.2146848510894035e-8,
+          "worldScale": [
+            1,
+            1,
+            0.9999999999999998
+          ]
+        }
+      ]
+    },
+    {
+      "content": "orb",
+      "bone": "leftHand",
+      "avatarScale": 0.65,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -2.1098530756741787,
+            0.7930172665247153,
+            0.016189795478982114
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.08,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 5.16191365590357e-8,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            -0.08695716691256443,
+            0.5378222094437098,
+            0.05166447319771137
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.08,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 5.16191365590357e-8,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            1.6365745581759032,
+            0.9405361978807366,
+            0.004625511157104824
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.08,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 5.16191365590357e-8,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "content": "orb",
+      "bone": "leftHand",
+      "avatarScale": 1,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -2.2961847087219884,
+            1.1771548901263733,
+            -0.032965821228791076
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.08,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 2.9802322387695312e-8,
+          "worldScale": [
+            0.9999999999999999,
+            1,
+            0.9999999999999999
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            -0.20711407985796554,
+            0.7845471100017491,
+            0.021610606030792453
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.08,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 2.9802322387695312e-8,
+          "worldScale": [
+            0.9999999999999999,
+            1,
+            0.9999999999999999
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            1.4213962664319857,
+            1.4041070922125596,
+            -0.050757027877833025
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.08,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 2.9802322387695312e-8,
+          "worldScale": [
+            0.9999999999999999,
+            1,
+            0.9999999999999999
+          ]
+        }
+      ]
+    },
+    {
+      "content": "orb",
+      "bone": "leftHand",
+      "avatarScale": 1.35,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -2.4825163417697977,
+            1.5612925137280307,
+            -0.08212143793656423
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.08,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 2.9802322387695312e-8,
+          "worldScale": [
+            0.9999999999999999,
+            1,
+            0.9999999999999999
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            -0.32727099280336674,
+            1.0312720105597886,
+            -0.00844326113612653
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.08,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 2.9802322387695312e-8,
+          "worldScale": [
+            0.9999999999999999,
+            1,
+            0.9999999999999999
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            1.2062179746880677,
+            1.8676779865443829,
+            -0.10613956691277092
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.08,
+              0
+            ],
+            "offsetSpace": "bone",
+            "rotationMode": "bone",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 2.9802322387695312e-8,
+          "worldScale": [
+            0.9999999999999999,
+            1,
+            0.9999999999999999
+          ]
+        }
+      ]
+    },
+    {
+      "content": "tag",
+      "bone": "chest",
+      "avatarScale": 0.65,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -1.7613163105831393,
+            0.8230050970417955,
+            0.09926672507243917
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            0.13579103749119925,
+            0.6126206430024126,
+            0.1087738996170091
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            2.0382010189447315,
+            0.9443215110850429,
+            0.10084286676206947
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "content": "tag",
+      "bone": "chest",
+      "avatarScale": 1,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -1.7612147431408707,
+            1.14770014929507,
+            0.09885759360152559
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            0.1343350231273427,
+            0.82403175846525,
+            0.11348401597778704
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            2.0380426869020085,
+            1.3343407862846812,
+            0.10128242697018758
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "content": "tag",
+      "bone": "chest",
+      "avatarScale": 1.35,
+      "models": [
+        {
+          "avatarId": "local-vrm:sha256:109f4691d1c0b5c8458a48ec26ac59054d2c26df3ed0513292b51e9fe0116a95",
+          "label": "V01 ローカルVRM",
+          "position": [
+            -1.7611131756986018,
+            1.4723952015483444,
+            0.09844846213061201
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:a3b1423d954e026c4bd6b67645fb88089a4905ef6b1d05636c05cad14ff52840",
+          "label": "V02 ローカルVRM",
+          "position": [
+            0.1328790087634861,
+            1.0354428739280876,
+            0.11819413233856495
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5",
+          "label": "V03 ローカルVRM",
+          "position": [
+            2.037884354859285,
+            1.7243600614843198,
+            0.1017219871783057
+          ],
+          "settings": {
+            "offset": [
+              0,
+              0.22,
+              0
+            ],
+            "offsetSpace": "world",
+            "rotationMode": "world-up",
+            "scale": 1
+          },
+          "errorMm": 0,
+          "orientationErrorRad": 0,
+          "worldScale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "nonGet": [],
+  "captures": "Ignored artifacts/local-vrms-*-private.png; not public deliverables",
+  "visualFit": "Uncalibrated probes; human fit acceptance remains separate",
+  "visualObservation": {
+    "status": "not-visually-accepted",
+    "headTag": "All three models and tags rendered. Uncalibrated overhead clearance varies.",
+    "headHat": "V01 and V02 hats were buried/hidden with default bone offsets; V03 hat visible.",
+    "decision": "Add explicit neutral reference calibration. Numerical agreement alone is insufficient.",
+    "runtimeWarnings": [
+      "VRM0 LookAtDegreeMap curves unsupported by three-vrm; look-at curves are outside this anchor experiment."
+    ]
+  }
+}

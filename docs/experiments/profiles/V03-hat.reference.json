@@ -1,0 +1,23 @@
+{
+  "schema": "xrift-avatar-anchor.profile",
+  "version": 1,
+  "avatarId": "local-vrm:sha256:d4c9ecb54faadc5691cc3d84f09a89eed2acdbe0b7b19d83b984a28f9fc2b1f5:vrm0-forward-v1",
+  "attachmentId": "hat:head",
+  "bone": "head",
+  "settings": {
+    "offset": [
+      0,
+      0.25828715031000005,
+      0
+    ],
+    "offsetSpace": "bone",
+    "rotationMode": "bone",
+    "scale": 1,
+    "rotationOffset": [
+      0,
+      -1,
+      0,
+      6.123233995736766e-17
+    ]
+  }
+}

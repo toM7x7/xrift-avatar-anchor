@@ -1,0 +1,580 @@
+{
+  "tier": "official-DevEnvironment-with-authored-rig",
+  "sdk": "0.58.0",
+  "checks": {
+    "officialItemInjection": true,
+    "declarationProxy": true,
+    "nativeCenterRayEquip": true,
+    "nativePointerLock": true,
+    "nativePhysicsWalk": true,
+    "follow": true,
+    "statusSwitch": true,
+    "twoPlacementIsolation": true,
+    "detach": true,
+    "reattach": true,
+    "missingHeadHidden": true,
+    "ambiguousHeadHidden": true,
+    "automaticScaleRecalibration": true,
+    "noPageErrors": true,
+    "noNonGetRequests": true
+  },
+  "movement": {
+    "bodyDelta": -0.7421797513961792,
+    "headDelta": -0.7421797513961792,
+    "tagDelta": -0.7421797513961792,
+    "trackingDeltaErrorMm": 0
+  },
+  "idle": {
+    "environment": "official-DevEnvironment-0.58.0",
+    "movement": {
+      "position": {
+        "x": 0,
+        "y": -0.0013258934020996538,
+        "z": 2.5
+      },
+      "direction": {
+        "x": 0,
+        "z": 0
+      },
+      "horizontalSpeed": 0,
+      "verticalSpeed": 2.3221759237745943e-10,
+      "rotation": {
+        "yaw": 0,
+        "pitch": -0.3133271675841541
+      },
+      "isGrounded": true,
+      "isJumping": false
+    },
+    "camera": {
+      "position": [
+        0,
+        1.4386741065979005,
+        2.5
+      ],
+      "quaternion": [
+        -0.15602352487772803,
+        0,
+        0,
+        0.9877533394956096
+      ]
+    },
+    "items": [
+      {
+        "itemId": "tag-sdk-one",
+        "phase": "idle",
+        "ownerId": null,
+        "reason": null
+      },
+      {
+        "itemId": "tag-sdk-two",
+        "phase": "idle",
+        "ownerId": null,
+        "reason": null
+      }
+    ]
+  },
+  "equipped": {
+    "environment": "official-DevEnvironment-0.58.0",
+    "movement": {
+      "position": {
+        "x": 0,
+        "y": -0.0011289596557617632,
+        "z": 2.5
+      },
+      "direction": {
+        "x": 0,
+        "z": 0
+      },
+      "horizontalSpeed": 0,
+      "verticalSpeed": -1.4490187695559431e-11,
+      "rotation": {
+        "yaw": 0,
+        "pitch": -0.11106091375783006
+      },
+      "isGrounded": true,
+      "isJumping": false
+    },
+    "camera": {
+      "position": [
+        0,
+        1.4388710403442384,
+        2.5
+      ],
+      "quaternion": [
+        -0.05550192203317118,
+        0,
+        0,
+        0.9984585803380247
+      ]
+    },
+    "items": [
+      {
+        "itemId": "tag-sdk-one",
+        "phase": "worn",
+        "ownerId": "dev-local-user",
+        "source": "local-unclaimed-head",
+        "bindingIdentity": "dev-local-user:2e920fa8-064f-4160-9e4a-32a0d062f1bb:3e98e626-5969-409f-9e41-22981c76d1cd:304f3fac-3308-4c46-8d66-4b33c86697f2",
+        "head": [
+          0,
+          1.5388710403442383,
+          2.5
+        ],
+        "position": [
+          -6.938893903907228e-18,
+          1.8665054835289747,
+          2.471795845418367
+        ],
+        "offset": [
+          -6.938893903907228e-18,
+          0.32763444318473645,
+          -0.028204154581632945
+        ],
+        "statusIndex": 0,
+        "extraHeight": 0,
+        "calibration": {
+          "method": "head-skinned-vertices",
+          "confidence": "complete",
+          "sampledVertices": 432,
+          "acceptedVertices": 48,
+          "meshCount": 1,
+          "headTopY": 1.7465054835289748
+        },
+        "calibrationAt": 0.9689999999999998,
+        "followAt": 0.9689999999999998,
+        "serial": 1
+      },
+      {
+        "itemId": "tag-sdk-two",
+        "phase": "idle",
+        "ownerId": null,
+        "reason": null
+      }
+    ]
+  },
+  "moved": {
+    "environment": "official-DevEnvironment-0.58.0",
+    "movement": {
+      "position": {
+        "x": -8.457193167998867e-9,
+        "y": -0.0011395692825317827,
+        "z": 1.7578202486038208
+      },
+      "direction": {
+        "x": 0,
+        "z": -1
+      },
+      "horizontalSpeed": 5,
+      "verticalSpeed": -2.9024883191342e-11,
+      "rotation": {
+        "yaw": 0,
+        "pitch": -0.11106091375783006
+      },
+      "isGrounded": true,
+      "isJumping": false
+    },
+    "camera": {
+      "position": [
+        -8.457193167998867e-9,
+        1.4388604307174684,
+        1.7578202486038208
+      ],
+      "quaternion": [
+        -0.05550192203317118,
+        0,
+        0,
+        0.9984585803380247
+      ]
+    },
+    "items": [
+      {
+        "itemId": "tag-sdk-one",
+        "phase": "worn",
+        "ownerId": "dev-local-user",
+        "source": "local-unclaimed-head",
+        "bindingIdentity": "dev-local-user:2e920fa8-064f-4160-9e4a-32a0d062f1bb:3e98e626-5969-409f-9e41-22981c76d1cd:304f3fac-3308-4c46-8d66-4b33c86697f2",
+        "head": [
+          -8.457193167998867e-9,
+          1.5388604307174683,
+          1.7578202486038208
+        ],
+        "position": [
+          -8.45719317493776e-9,
+          1.8664948739022047,
+          1.7296160940221879
+        ],
+        "offset": [
+          -6.938893903907228e-18,
+          0.32763444318473645,
+          -0.028204154581632945
+        ],
+        "statusIndex": 0,
+        "extraHeight": 0,
+        "calibration": {
+          "method": "head-skinned-vertices",
+          "confidence": "complete",
+          "sampledVertices": 432,
+          "acceptedVertices": 48,
+          "meshCount": 1,
+          "headTopY": 1.7465054835289748
+        },
+        "calibrationAt": 0.9689999999999998,
+        "followAt": 1.146700000017881,
+        "serial": 1
+      },
+      {
+        "itemId": "tag-sdk-two",
+        "phase": "idle",
+        "ownerId": null,
+        "reason": null
+      }
+    ]
+  },
+  "beforeMissing": {
+    "environment": "official-DevEnvironment-0.58.0",
+    "movement": {
+      "position": {
+        "x": -9.621857088859542e-9,
+        "y": -0.0011377215385437456,
+        "z": 1.6693068742752075
+      },
+      "direction": {
+        "x": 0,
+        "z": 0
+      },
+      "horizontalSpeed": 0,
+      "verticalSpeed": 1.8143497771891393e-12,
+      "rotation": {
+        "yaw": 0,
+        "pitch": -0.11106091375783006
+      },
+      "isGrounded": true,
+      "isJumping": false
+    },
+    "camera": {
+      "position": [
+        -9.621857088859542e-9,
+        1.4388622784614564,
+        1.6693068742752075
+      ],
+      "quaternion": [
+        -0.05550192203317118,
+        0,
+        0,
+        0.9984585803380247
+      ]
+    },
+    "items": [
+      {
+        "itemId": "tag-sdk-one",
+        "phase": "worn",
+        "ownerId": "dev-local-user",
+        "source": "local-unclaimed-head",
+        "bindingIdentity": "dev-local-user:2e920fa8-064f-4160-9e4a-32a0d062f1bb:3e98e626-5969-409f-9e41-22981c76d1cd:304f3fac-3308-4c46-8d66-4b33c86697f2",
+        "head": [
+          -9.621857088859542e-9,
+          1.5388622784614563,
+          1.6693068742752075
+        ],
+        "position": [
+          -9.62185710273733e-9,
+          1.8664967216461927,
+          1.6411027196935746
+        ],
+        "offset": [
+          -1.3877787807814457e-17,
+          0.32763444318473645,
+          -0.028204154581632945
+        ],
+        "statusIndex": 0,
+        "extraHeight": 0,
+        "calibration": {
+          "method": "head-skinned-vertices",
+          "confidence": "complete",
+          "sampledVertices": 432,
+          "acceptedVertices": 48,
+          "meshCount": 1,
+          "headTopY": 1.7464967216461929
+        },
+        "calibrationAt": 1.4800999999940392,
+        "followAt": 1.4800999999940392,
+        "serial": 4
+      },
+      {
+        "itemId": "tag-sdk-two",
+        "phase": "idle",
+        "ownerId": null,
+        "reason": null
+      }
+    ]
+  },
+  "missing": {
+    "environment": "official-DevEnvironment-0.58.0",
+    "movement": {
+      "position": {
+        "x": -9.622392660446621e-9,
+        "y": -0.0011379003524780718,
+        "z": 1.6693068742752075
+      },
+      "direction": {
+        "x": 0,
+        "z": 0
+      },
+      "horizontalSpeed": 0,
+      "verticalSpeed": 1.3597277600738145e-12,
+      "rotation": {
+        "yaw": 0,
+        "pitch": -0.11106091375783006
+      },
+      "isGrounded": true,
+      "isJumping": false
+    },
+    "camera": {
+      "position": [
+        -9.622392660446621e-9,
+        1.438862099647522,
+        1.6693068742752075
+      ],
+      "quaternion": [
+        -0.05550192203317118,
+        0,
+        0,
+        0.9984585803380247
+      ]
+    },
+    "items": [
+      {
+        "itemId": "tag-sdk-one",
+        "phase": "pending",
+        "ownerId": "dev-local-user",
+        "reason": "waiting-for-head"
+      },
+      {
+        "itemId": "tag-sdk-two",
+        "phase": "idle",
+        "ownerId": null,
+        "reason": null
+      }
+    ]
+  },
+  "ambiguous": {
+    "environment": "official-DevEnvironment-0.58.0",
+    "movement": {
+      "position": {
+        "x": -9.622393548625041e-9,
+        "y": -0.0011379003524780718,
+        "z": 1.6693068742752075
+      },
+      "direction": {
+        "x": 0,
+        "z": 0
+      },
+      "horizontalSpeed": 0,
+      "verticalSpeed": 3.62818369098461e-12,
+      "rotation": {
+        "yaw": 0,
+        "pitch": -0.11106091375783006
+      },
+      "isGrounded": true,
+      "isJumping": false
+    },
+    "camera": {
+      "position": [
+        -9.622393548625041e-9,
+        1.438862099647522,
+        1.6693068742752075
+      ],
+      "quaternion": [
+        -0.05550192203317118,
+        0,
+        0,
+        0.9984585803380247
+      ]
+    },
+    "items": [
+      {
+        "itemId": "tag-sdk-one",
+        "phase": "pending",
+        "ownerId": "dev-local-user",
+        "reason": "ambiguous-head"
+      },
+      {
+        "itemId": "tag-sdk-two",
+        "phase": "idle",
+        "ownerId": null,
+        "reason": null
+      }
+    ]
+  },
+  "scales": [
+    {
+      "scale": 0.6,
+      "report": {
+        "itemId": "tag-sdk-one",
+        "phase": "worn",
+        "ownerId": "dev-local-user",
+        "source": "local-unclaimed-head",
+        "bindingIdentity": "dev-local-user:2e920fa8-064f-4160-9e4a-32a0d062f1bb:3e98e626-5969-409f-9e41-22981c76d1cd:304f3fac-3308-4c46-8d66-4b33c86697f2",
+        "head": [
+          -9.6353716116937e-9,
+          0.9228573312759398,
+          1.6693068742752075
+        ],
+        "position": [
+          -9.6353716116937e-9,
+          1.167437997186782,
+          1.6523843815262278
+        ],
+        "offset": [
+          0,
+          0.24458066591084227,
+          -0.016922492748979723
+        ],
+        "statusIndex": 0,
+        "extraHeight": 0,
+        "calibration": {
+          "method": "head-skinned-vertices",
+          "confidence": "complete",
+          "sampledVertices": 432,
+          "acceptedVertices": 48,
+          "meshCount": 1,
+          "headTopY": 1.047437997186782
+        },
+        "calibrationAt": 3.0469000000059587,
+        "followAt": 3.0469000000059587,
+        "serial": 4
+      }
+    },
+    {
+      "scale": 1.4,
+      "report": {
+        "itemId": "tag-sdk-one",
+        "phase": "worn",
+        "ownerId": "dev-local-user",
+        "source": "local-unclaimed-head",
+        "bindingIdentity": "dev-local-user:2e920fa8-064f-4160-9e4a-32a0d062f1bb:3e98e626-5969-409f-9e41-22981c76d1cd:304f3fac-3308-4c46-8d66-4b33c86697f2",
+        "head": [
+          -9.619482099765264e-9,
+          2.1548628149032596,
+          1.6693068742752075
+        ],
+        "position": [
+          -9.619482072009689e-9,
+          2.5655510353618913,
+          1.6298210578609216
+        ],
+        "offset": [
+          2.7755575615628914e-17,
+          0.41068822045863174,
+          -0.039485816414285946
+        ],
+        "statusIndex": 0,
+        "extraHeight": 0,
+        "calibration": {
+          "method": "head-skinned-vertices",
+          "confidence": "complete",
+          "sampledVertices": 432,
+          "acceptedVertices": 48,
+          "meshCount": 1,
+          "headTopY": 2.4455510353618912
+        },
+        "calibrationAt": 3.780499999999998,
+        "followAt": 3.780499999999998,
+        "serial": 4
+      }
+    },
+    {
+      "scale": 1,
+      "report": {
+        "itemId": "tag-sdk-one",
+        "phase": "worn",
+        "ownerId": "dev-local-user",
+        "source": "local-unclaimed-head",
+        "bindingIdentity": "dev-local-user:2e920fa8-064f-4160-9e4a-32a0d062f1bb:3e98e626-5969-409f-9e41-22981c76d1cd:304f3fac-3308-4c46-8d66-4b33c86697f2",
+        "head": [
+          -9.62127177928096e-9,
+          1.5388620400428772,
+          1.6693068742752075
+        ],
+        "position": [
+          -9.621271793158748e-9,
+          1.8664964832276136,
+          1.6411027196935746
+        ],
+        "offset": [
+          -1.3877787807814457e-17,
+          0.32763444318473645,
+          -0.028204154581632945
+        ],
+        "statusIndex": 0,
+        "extraHeight": 0,
+        "calibration": {
+          "method": "head-skinned-vertices",
+          "confidence": "complete",
+          "sampledVertices": 432,
+          "acceptedVertices": 48,
+          "meshCount": 1,
+          "headTopY": 1.7464964832276137
+        },
+        "calibrationAt": 4.513499999999996,
+        "followAt": 4.513499999999996,
+        "serial": 4
+      }
+    }
+  ],
+  "detached": {
+    "environment": "official-DevEnvironment-0.58.0",
+    "movement": {
+      "position": {
+        "x": -9.620319652015041e-9,
+        "y": -0.0011378407478332964,
+        "z": 1.6693068742752075
+      },
+      "direction": {
+        "x": 0,
+        "z": 0
+      },
+      "horizontalSpeed": 0,
+      "verticalSpeed": 1.3607874592772018e-12,
+      "rotation": {
+        "yaw": 0,
+        "pitch": -0.11106091375783006
+      },
+      "isGrounded": true,
+      "isJumping": false
+    },
+    "camera": {
+      "position": [
+        -9.620319652015041e-9,
+        2.198862159252167,
+        4.6693068742752075
+      ],
+      "quaternion": [
+        -0.05550192203317118,
+        0,
+        0,
+        0.9984585803380247
+      ]
+    },
+    "items": [
+      {
+        "itemId": "tag-sdk-one",
+        "phase": "idle",
+        "ownerId": null,
+        "reason": null
+      },
+      {
+        "itemId": "tag-sdk-two",
+        "phase": "idle",
+        "ownerId": null,
+        "reason": null
+      }
+    ]
+  },
+  "errors": [],
+  "nonGet": [],
+  "limitations": [
+    "Additional authored skinned avatar follows SDK movement; default SDK avatar has no skeleton.",
+    "Observer camera is test-only; SDK itself is first-person.",
+    "Single local user; no real multiplayer/Quest evidence."
+  ]
+}

@@ -1,0 +1,980 @@
+{
+  "date": "2026-10-25",
+  "scope": "Avatar Attachment foundation v1; local library and comparative laboratory",
+  "delegation": [
+    "core + profiles + independent review",
+    "numerical experiment matrix",
+    "comparison UI + VRM observation support"
+  ],
+  "verification": {
+    "unitTests": 20,
+    "passed": 20,
+    "typecheck": true,
+    "build": true,
+    "viteChunkSizeAdvisory": true,
+    "numericalMatrix": {
+      "syntheticConditions": 810,
+      "privateVrmMetadataConditions": 405,
+      "total": 1215,
+      "passed": 1215
+    },
+    "authoredBrowser": {
+      "checks": {
+        "parallelFixtures": 5,
+        "motion": true,
+        "pause": true,
+        "calibrationIsolation": true,
+        "offGridSettingsRoundTrip": true,
+        "profileRoundTrip": true,
+        "mismatchedProfileRejected": true,
+        "hat/head": true,
+        "orb/leftHand": true,
+        "tag/chest": true,
+        "cameraFacing": true,
+        "noPageErrors": true,
+        "noNonGetRequests": true
+      },
+      "maxErrorMm": 0,
+      "maxOrientationErrorRad": 0,
+      "models": [
+        {
+          "id": "fixture:standard",
+          "kind": "standard"
+        },
+        {
+          "id": "fixture:small",
+          "kind": "small"
+        },
+        {
+          "id": "fixture:tall",
+          "kind": "tall"
+        },
+        {
+          "id": "fixture:forward-pivot",
+          "kind": "forward-pivot"
+        },
+        {
+          "id": "fixture:axis-turned",
+          "kind": "axis-turned"
+        }
+      ],
+      "evidenceTier": "authored-fixture-browser",
+      "errors": [],
+      "nonGet": []
+    },
+    "authoredReference": {
+      "evidenceTier": "authored-fixture-browser",
+      "checks": {
+        "models": 5,
+        "explicitReferenceOnly": true,
+        "neutralWorldUp": true,
+        "estimatedTopClearance": true,
+        "boneLocalTracking": true,
+        "controlledPosePreserved": true,
+        "requiresVisualReview": true,
+        "referenceRevisionAdvanced": true,
+        "neutralReferenceScaleMovementRoundTrip": true
+      },
+      "results": [
+        {
+          "label": "S01 標準",
+          "kind": "standard",
+          "avatarId": "fixture:standard",
+          "reference": {
+            "revision": 1,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 1.7400000095367432,
+            "neutralBonePosition": [
+              -3.8,
+              1.54,
+              0
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.2,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "camera-facing",
+              "scale": 1
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.21500000953674314,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "before": {
+              "position": [
+                -3.8,
+                1.74,
+                0
+              ],
+              "quaternion": [
+                -0.07885192750774511,
+                0.04472404968689504,
+                0.0035411803102585516,
+                0.995876293999374
+              ],
+              "neutralOrientationErrorRad": 0.18169299997279661,
+              "modelTopClearanceM": -9.536743172944284e-9
+            },
+            "after": {
+              "position": [
+                -3.8,
+                1.7550000095367433,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.015000000000000124
+            }
+          },
+          "repeatReference": {
+            "revision": 2,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 1.7400000095367432,
+            "neutralBonePosition": [
+              -3.8,
+              1.54,
+              0
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.215000009536743,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.21500000953674314,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "before": {
+              "position": [
+                -3.8,
+                1.755000009536743,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.014999999999999902
+            },
+            "after": {
+              "position": [
+                -3.8,
+                1.7550000095367433,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.015000000000000124
+            }
+          },
+          "neutralTopRepeatDifferenceM": 0,
+          "calibrationRepeatDifference": 0,
+          "trackingErrorMm": 0,
+          "orientationErrorRad": 0,
+          "sourceDifference": 0
+        },
+        {
+          "label": "S02 小型",
+          "kind": "small",
+          "avatarId": "fixture:small",
+          "reference": {
+            "revision": 3,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 1.1310000061988832,
+            "neutralBonePosition": [
+              -1.9,
+              1.0010000000000001,
+              0
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.2,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.1450000061988831,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "before": {
+              "position": [
+                -1.9,
+                1.201,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.06999999380111688
+            },
+            "after": {
+              "position": [
+                -1.9,
+                1.146000006198883,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.014999999999999902
+            }
+          },
+          "repeatReference": {
+            "revision": 4,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 1.1310000061988832,
+            "neutralBonePosition": [
+              -1.9,
+              1.0010000000000001,
+              0
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.145000006198883,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.1450000061988831,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "before": {
+              "position": [
+                -1.9,
+                1.146000006198883,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.014999999999999902
+            },
+            "after": {
+              "position": [
+                -1.9,
+                1.146000006198883,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.014999999999999902
+            }
+          },
+          "neutralTopRepeatDifferenceM": 0,
+          "calibrationRepeatDifference": 0,
+          "trackingErrorMm": 0,
+          "orientationErrorRad": 0,
+          "sourceDifference": 0
+        },
+        {
+          "label": "S03 大型",
+          "kind": "tall",
+          "avatarId": "fixture:tall",
+          "reference": {
+            "revision": 5,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 2.349000012874603,
+            "neutralBonePosition": [
+              0,
+              2.0789999999999997,
+              0
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.2,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.2850000128746032,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "before": {
+              "position": [
+                0,
+                2.279,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": -0.070000012874603
+            },
+            "after": {
+              "position": [
+                0,
+                2.364000012874603,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.015000000000000124
+            }
+          },
+          "repeatReference": {
+            "revision": 6,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 2.349000012874603,
+            "neutralBonePosition": [
+              0,
+              2.0789999999999997,
+              0
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.285000012874603,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.2850000128746032,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "before": {
+              "position": [
+                0,
+                2.3640000128746026,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.01499999999999968
+            },
+            "after": {
+              "position": [
+                0,
+                2.364000012874603,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.015000000000000124
+            }
+          },
+          "neutralTopRepeatDifferenceM": 0,
+          "calibrationRepeatDifference": 0,
+          "trackingErrorMm": 0,
+          "orientationErrorRad": 0,
+          "sourceDifference": 0
+        },
+        {
+          "label": "S04 前方ピボット",
+          "kind": "forward-pivot",
+          "avatarId": "fixture:forward-pivot",
+          "reference": {
+            "revision": 7,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 1.7400000095367432,
+            "neutralBonePosition": [
+              1.9,
+              1.54,
+              0.08
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.2,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.21500000953674314,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "before": {
+              "position": [
+                1.9,
+                1.74,
+                0.08
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": -9.536743172944284e-9
+            },
+            "after": {
+              "position": [
+                1.9,
+                1.7550000095367433,
+                0.08
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.015000000000000124
+            }
+          },
+          "repeatReference": {
+            "revision": 8,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 1.7400000095367432,
+            "neutralBonePosition": [
+              1.9,
+              1.54,
+              0.08
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.215000009536743,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.21500000953674314,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "before": {
+              "position": [
+                1.9,
+                1.755000009536743,
+                0.08
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.014999999999999902
+            },
+            "after": {
+              "position": [
+                1.9,
+                1.7550000095367433,
+                0.08
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.015000000000000124
+            }
+          },
+          "neutralTopRepeatDifferenceM": 0,
+          "calibrationRepeatDifference": 0,
+          "trackingErrorMm": 0,
+          "orientationErrorRad": 0,
+          "sourceDifference": 0
+        },
+        {
+          "label": "S05 骨軸90°",
+          "kind": "axis-turned",
+          "avatarId": "fixture:axis-turned",
+          "reference": {
+            "revision": 9,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 1.7400000095367432,
+            "neutralBonePosition": [
+              3.8,
+              1.54,
+              0
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0.7071067811865475,
+              0,
+              0.7071067811865476
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.2,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.21500000953674314,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                -0.7071067811865475,
+                0,
+                0.7071067811865476
+              ]
+            },
+            "before": {
+              "position": [
+                3.8,
+                1.74,
+                0
+              ],
+              "quaternion": [
+                0,
+                0.7071067811865475,
+                0,
+                0.7071067811865476
+              ],
+              "neutralOrientationErrorRad": 1.5707963267948966,
+              "modelTopClearanceM": -9.536743172944284e-9
+            },
+            "after": {
+              "position": [
+                3.8,
+                1.7550000095367433,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.015000000000000124
+            }
+          },
+          "repeatReference": {
+            "revision": 10,
+            "method": "neutral-model-bounding-box-top",
+            "requiresVisualReview": true,
+            "avatarScale": 1,
+            "boneRole": "head",
+            "modelTopY": 1.7400000095367432,
+            "neutralBonePosition": [
+              3.8,
+              1.54,
+              0
+            ],
+            "neutralBoneQuaternion": [
+              0,
+              0.7071067811865475,
+              0,
+              0.7071067811865476
+            ],
+            "nominalClearanceM": 0.015,
+            "beforeSettings": {
+              "offset": [
+                0,
+                0.215000009536743,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                -0.7071067811865475,
+                0,
+                0.7071067811865476
+              ]
+            },
+            "afterSettings": {
+              "offset": [
+                0,
+                0.21500000953674314,
+                0
+              ],
+              "offsetSpace": "bone",
+              "rotationMode": "bone",
+              "scale": 1,
+              "rotationOffset": [
+                0,
+                -0.7071067811865475,
+                0,
+                0.7071067811865476
+              ]
+            },
+            "before": {
+              "position": [
+                3.8,
+                1.755000009536743,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.014999999999999902
+            },
+            "after": {
+              "position": [
+                3.8,
+                1.7550000095367433,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "neutralOrientationErrorRad": 0,
+              "modelTopClearanceM": 0.015000000000000124
+            }
+          },
+          "neutralTopRepeatDifferenceM": 0,
+          "calibrationRepeatDifference": 0,
+          "trackingErrorMm": 0,
+          "orientationErrorRad": 0,
+          "sourceDifference": 0
+        }
+      ]
+    },
+    "realVrmBrowser": {
+      "models": 3,
+      "observations": 36,
+      "checks": {
+        "parallelRendering": true,
+        "allModelsMoving": true,
+        "headTag": true,
+        "headHat": true,
+        "chestTag": true,
+        "leftHandItem": true,
+        "threeAvatarScales": true,
+        "noPageErrors": true,
+        "noNonGetRequests": true
+      }
+    },
+    "realVrmReference": {
+      "checks": {
+        "models": 3,
+        "explicitReferenceOnly": true,
+        "neutralWorldUp": true,
+        "estimatedTopClearance": true,
+        "boneLocalTracking": true,
+        "controlledPosePreserved": true,
+        "requiresVisualReview": true,
+        "referenceRevisionAdvanced": true,
+        "neutralReferenceScaleMovementRoundTrip": true
+      },
+      "maxNeutralTopRepeatDifferenceM": 0
+    }
+  },
+  "corrections": [
+    "generic body role anchor and strict calibration identities",
+    "off-grid UI import no step snapping",
+    "reset explicit raw humanoid Object3D nodes each pose",
+    "verify raw and normalized VRM root membership",
+    "rotate VRM0 forward and version profile convention",
+    "synchronize SkinnedMesh.updateMatrixWorld/bindMatrixInverse before sampling bounds",
+    "reference revision wait and scale/movement roundtrip test",
+    "new experiment outputs never overwrite canonical evidence"
+  ],
+  "privacy": {
+    "privateModelsCommitted": false,
+    "privateModelImagesCommitted": false,
+    "privateInputNamesInReports": false
+  },
+  "delivery": {
+    "githubPush": false,
+    "npmPublished": false,
+    "xriftPublished": false
+  },
+  "unverified": [
+    "Human acceptance of actual hat contact, scale and readability",
+    "Actual VRM1 model runtime",
+    "Live XRift avatar acquisition and attachment lifecycle",
+    "Quest",
+    "Other-user view and real multiuser isolation",
+    "Latency and full avatar runtime",
+    "Persistent/shared status state"
+  ]
+}

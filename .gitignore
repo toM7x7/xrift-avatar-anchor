@@ -12,3 +12,4 @@ local-assets/vrm/*
 !.env.example
 *.log
 .playwright-cli/
+.playwright-mcp/
