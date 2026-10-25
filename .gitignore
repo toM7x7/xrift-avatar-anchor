@@ -1,7 +1,10 @@
 node_modules/
 dist/
 artifacts/
-local-assets/
+local-assets/*
+!local-assets/vrm/
+local-assets/vrm/*
+!local-assets/vrm/README.md
 *.vrm
 *.vrma
 .env

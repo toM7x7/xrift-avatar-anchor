@@ -13,6 +13,8 @@ npm run dev
 
 http://127.0.0.1:5227/ を開きます。自作の標準／小型／大型骨格を選び、左右・高さ・前後と大きさを調整できます。JSONの書き出し・読み込みで補正を再利用できます。実VRMは画面のファイル選択でブラウザ内だけに読み込みます。
 
+モデルのローカル保管には [local-assets/vrm/](local-assets/vrm/README.md) を使えます。このフォルダのREADME以外はGit対象外です。デモのファイル選択から読み込んでください。
+
 ![調整デモ](docs/screenshots/anchor-demo.png)
 
 ## 入っているもの
