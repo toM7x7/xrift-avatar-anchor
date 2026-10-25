@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-25",
+  "source": "head-propeller-ride v9",
+  "copiedFiles": [
+    "demo/fixture.mjs (authored test body)"
+  ],
+  "newCore": [
+    "src/index.mjs",
+    "src/adapters/xrift.mjs"
+  ],
+  "note": "The anchor math is newly separated from the propeller Item and FlightRide. No avatar files or host source are copied."
+}
