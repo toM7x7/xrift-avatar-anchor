@@ -10,6 +10,8 @@ import {createPoseFixture} from '../../../demo/fixture.mjs'
 import {syncSkinnedTransforms} from '../../../demo/skinning.mjs'
 
 type Actor={root:Object3D;head:Object3D;rest:Quaternion;id:string;dispose:()=>void}
+const published=new URLSearchParams(location.search).has('published')
+const selectedItemId=published?'82fe0855-60d8-4880-9f88-f3c10276796c':'00000000-0000-4000-8000-000000000001'
 function fixtureActor():Actor{const f=createPoseFixture() as any;return {root:f.mesh,head:f.bones.head,rest:f.bones.head.quaternion.clone(),id:'authored-fixture',dispose:()=>f.dispose()}}
 function disposeModel(root:Object3D){const geometry=new Set<any>(),materials=new Set<any>(),textures=new Set<any>(),skeletons=new Set<any>();root.traverse((o:any)=>{if(o.geometry)geometry.add(o.geometry);if(o.skeleton)skeletons.add(o.skeleton);for(const m of Array.isArray(o.material)?o.material:o.material?[o.material]:[]){materials.add(m);for(const v of Object.values(m))if((v as any)?.isTexture)textures.add(v)}});geometry.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());skeletons.forEach(s=>s.dispose())}
 function SDKAvatar({actor,scale,enabled}:{actor:Actor;scale:number;enabled:boolean}){
@@ -29,10 +31,10 @@ function SDKBridge({observer,onRead,actorId}:{observer:boolean;onRead:(data:any)
   if(observer){camera.position.set(m.position.x,m.position.y+2.2,m.position.z+3);camera.layers.enable(10)}else camera.layers.disable(10)
   if(clock.elapsedTime-last.current<.15)return;last.current=clock.elapsedTime
   const items:any[]=[];scene.traverse(o=>{if(o.userData.avatarAnchor)items.push(o.userData.avatarAnchor)})
-  const data={environment:'official-DevEnvironment-0.58.0',avatar:'additional owned test rig, not SDK DummyAvatar',modelId:actorId,observerCamera:observer,movement:structuredClone(m),items};(window as any).__sdkTagReadback=data;onRead(data)
+  const data={environment:'official-DevEnvironment-0.58.0',delivery:published?'published-v2-federation':'local-source',avatar:'additional owned test rig, not SDK DummyAvatar',modelId:actorId,observerCamera:observer,movement:structuredClone(m),items};(window as any).__sdkTagReadback=data;onRead(data)
  })
  useEffect(()=>{
-  (window as any).__sdkTagActions={interact(suffix:string,placementId='tag-sdk-one'){let target:any=null;scene.traverse(o=>{if(o.userData?.id===`${placementId}:head-tag:${suffix}`)target=o.userData});if(!target)return false;target.onInteract(target.id);return true},aimAtStation(){camera.lookAt(0,1.16,0)},snapshot(){const items:any[]=[];scene.traverse(o=>{if(o.userData.avatarAnchor)items.push(o.userData.avatarAnchor)});return {environment:'official-DevEnvironment-0.58.0',modelId:actorId,movement:structuredClone(users.getLocalMovement()),camera:{position:camera.position.toArray(),quaternion:camera.quaternion.toArray()},items}}}
+  (window as any).__sdkTagActions={interact(suffix:string,placementId='tag-sdk-one'){let target:any=null;scene.traverse(o=>{if(o.userData?.id===`${placementId}:head-tag:${suffix}`)target=o.userData});if(!target)return false;target.onInteract(target.id);return true},aimAtStation(){camera.lookAt(0,1.16,0)},snapshot(){const items:any[]=[];scene.traverse(o=>{if(o.userData.avatarAnchor)items.push(o.userData.avatarAnchor)});return {environment:'official-DevEnvironment-0.58.0',delivery:published?'published-v2-federation':'local-source',modelId:actorId,movement:structuredClone(users.getLocalMovement()),camera:{position:camera.position.toArray(),quaternion:camera.quaternion.toArray()},items}}}
   return()=>{delete (window as any).__sdkTagActions;delete (window as any).__sdkTagReadback}
  },[scene,users,actorId])
  return null
@@ -40,7 +42,7 @@ function SDKBridge({observer,onRead,actorId}:{observer:boolean;onRead:(data:any)
 export function SDKApp(){
  const [actor,setActor]=useState<Actor>(fixtureActor),[scale,setScale]=useState(1),[observer,setObserver]=useState(false),[enabled,setEnabled]=useState(true),[ambiguous,setAmbiguous]=useState(false),[report,setReport]=useState<any>(null),[message,setMessage]=useState('自作骨格を追加しています。標準SDKの箱型アバターとは別です。'),generation=useRef(0)
  useEffect(()=>()=>actor.dispose(),[actor])
- const items=useMemo(()=>({'00000000-0000-4000-8000-000000000001':TagItem}),[])
+ const items=useMemo(()=>{const registry:Record<string,typeof TagItem>={};if(!published)registry['00000000-0000-4000-8000-000000000001']=TagItem;return registry},[])
  async function loadFile(file:File){
   const request=++generation.current
   try{
@@ -61,10 +63,11 @@ export function SDKApp(){
    <color attach="background" args={['#e9eee9']}/><hemisphereLight args={['#ffffff','#768b80',2.5]}/><directionalLight position={[3,6,4]} intensity={2}/>
    <RigidBody type="fixed" colliders={false}><mesh position={[0,-.1,0]}><boxGeometry args={[40,.2,40]}/><meshStandardMaterial color="#d3dfd4"/></mesh><CuboidCollider args={[20,.1,20]} position={[0,-.1,0]}/></RigidBody><gridHelper args={[40,40,'#96ae9c','#c2d1c4']} position={[0,.005,0]}/>
    <SDKAvatar actor={actor} scale={scale} enabled={enabled}/>{ambiguous&&<AmbiguousRig/>}
-   <Suspense fallback={null}><SDKItem placementId="tag-sdk-one" itemId="00000000-0000-4000-8000-000000000001" position={[0,0,0]}/><SDKItem placementId="tag-sdk-two" itemId="00000000-0000-4000-8000-000000000001" position={[1,0,0]}/></Suspense>
+   <Suspense fallback={null}><SDKItem placementId="tag-sdk-one" itemId={selectedItemId} position={[0,0,0]}/><SDKItem placementId="tag-sdk-two" itemId={selectedItemId} position={[1,0,0]}/></Suspense>
    <SDKBridge observer={observer} onRead={setReport} actorId={actor.id}/>
   </DevEnvironment></XRiftProvider></section>
   <aside id="sdkControls" onMouseDown={e=>e.stopPropagation()} onClick={e=>e.stopPropagation()} style={{padding:20,overflow:'auto',background:'#fffdf5'}}><small>公式 DevEnvironment / SDK 0.58.0</small><h1>頭上タグの装着検証</h1><p>公式のアイテム差込・物理歩行・中央レイを使用。骨格と観察カメラは追加の検証機能です。</p>
+   <p>{published?'配信済みv2をCDNから読み込み':'ローカルのソースを差し込み'}</p>
    <p><button onClick={()=>(window as any).__sdkTagActions?.interact('equip')}>1を装着</button> <button onClick={()=>(window as any).__sdkTagActions?.interact('remove')}>1を外す</button></p><p><button onClick={()=>(window as any).__sdkTagActions?.interact('change')}>1の表示切替</button> <button onClick={()=>(window as any).__sdkTagActions?.interact('calibrate')}>1を再調整</button></p>
    <p><button onClick={()=>(window as any).__sdkTagActions?.aimAtStation()}>台座へ向く（クリック確認用）</button></p>
    <p><button onClick={()=>(window as any).__sdkTagActions?.interact('equip','tag-sdk-two')}>2を装着</button> <button onClick={()=>(window as any).__sdkTagActions?.interact('remove','tag-sdk-two')}>2を外す</button></p>

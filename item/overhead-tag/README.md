@@ -24,6 +24,8 @@ npm run dev
 
 [localhost:5237](http://127.0.0.1:5237/) は公式 `DevEnvironment`（world-components 0.58.0）の `items` 差込を使います。`@xrift/sdk/vite` の `xriftDev()` と専用の `dev-world.xrift.json` で宣言も確認します。ローカル用の仮IDは配信先の実アイテムIDと区別しています。
 
+`?published=1` を付けるとソース差込を外し、同じ公式Itemが公開済みの実アイテムIDを解決してCDNのModule Federationを読み込みます。CLIの認証済み環境とAPIへ到達できるネットワークが必要です。CLIトークンは開発サーバーだけが使用し、ブラウザへ渡しません。配信済みv2でも装着・歩行追従・解除・実VRM3体の自動補正を確認しました。[結果と再現手順](../../docs/experiments/OFFICIAL-LOCAL-2026-10-25.md)
+
 公式環境が担当するのは物理歩行・入力・中央レイ・ItemProvider・配置IDです。標準DummyAvatarは骨を持たないため、動きに連動する自作骨格またはローカル実VRMを追加しています。観察カメラも独自の検証機能です。これらを実XRiftやVR実機の確認済みとは扱いません。
 
 検証用の横ボタンはSDK Interactableのハンドラーを呼びます。「台座へ向く」を押し、Canvasをクリックする経路では公式の中央レイを通します。CanvasはWASD・Space・マウスで操作します。検証の自動化ではマウスロックをAPIで解除します。通常操作の解除はブラウザのEscです。
@@ -48,3 +50,5 @@ npx --yes @xrift/cli@latest upload item
 ビルド末尾の `verify-distribution.mjs` は、画像URLがアイテムのCDNディレクトリを逸脱しないこと、実ファイルの存在、512×512サムネイル、私有VRMの非同梱を確認します。
 
 共有状態は配置IDごとに分離し、不正なJSONは読込時に正規化します。装着・表示・高さ補正はインスタンス内の状態で、アバター別の永続保存や自動離席判定は実装していません。Quest・他者視点・実複数人は未確認です。
+
+実XRiftではインベントリ1枠への装備とv2プレビュー読込まで確認。本番CanvasのPointerLockが `WrongDocumentError` となり、配置・装着・追従・解除の受入は未完了です。公式ローカルの合格と本番の合格は区別します。

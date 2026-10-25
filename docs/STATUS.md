@@ -14,7 +14,8 @@
 | 実VRM1系 | 未確認。metadata形式のパーサテストだけでは実モデル合格としない |
 | 公式ローカルSDK | DevEnvironment 0.58.0のItem差込・中央レイ装着・物理歩行追従・解除・再装着・2配置分離・欠損/曖昧対象の保留が成功 |
 | 公式SDK＋実VRM3体 | 頭領域からの12cm補正・歩行追従・解除が成功。追加のVRM姿勢橋渡しを使うローカル検証 |
-| 実XRiftへの接続 | 新規アイテムv2を配信、ACTIVE・sceneUrl・配布物SHA一致を確認。本番の装着/解除受入は検証中 |
+| 配信済みv2＋公式SDK | CDN配信物を公式Item経由で読込。中央レイ装着・物理歩行追従・解除・2配置分離・倍率再調整が成功。実VRM3体も12cm補正・歩行・解除が成功 |
+| 実XRiftへの接続 | 新規アイテムv2を配信、ACTIVE・sceneUrl・配布物SHA一致を確認。インベントリ1枠へ装備。本番の装着/追従/解除はPointerLockエラーで未完了 |
 | Quest／他者視点／実複数人 | 未確認 |
 | 状態同期／自動離席／Marketplace配布 | 新規タグ配布済み。装着者/表示/高さは配置別の共有状態を実装。実複数人・自動離席は未確認/未実装 |
 
@@ -45,8 +46,15 @@
 - [公式DevEnvironmentでの実操作](experiments/official-sdk-item-2026-10-25.json)
 - [公式DevEnvironment＋実VRM3体](experiments/official-sdk-real-vrm-2026-10-25.json)
 - [配布v2のACTIVEとSHA256一致](experiments/tag-v2-release-2026-10-25.json)
+- [配信済みv2＋公式DevEnvironment](experiments/official-sdk-published-v2-2026-10-25.json)
+- [配信済みv2＋実VRM3体](experiments/official-sdk-published-v2-real-vrm-2026-10-25.json)
+- [公式ローカルでの再現手順と本番の停止点](experiments/OFFICIAL-LOCAL-2026-10-25.md)
 
-ブラウザの検証操作ではページ例外/非GETリクエストは0でした。VRM0のLookAtDegreeMap非対応警告があり、視線曲線は確認範囲外です。デモはフルVRMアニメーション・spring bone・XRiftのIKランタイムを再現していません。フレーム遅延、性能、タグ可読性、髪との接触は実機と人の確認が必要です。
+配信済みv2は公式SDKのサーバープロキシ経由で解決し、Module Federationから読み込んだものです。ソース差込とは別に確認しています。実VRM3体の頭領域上端との距離は約0.12m、停止した移動前後の頭/タグと身体の移動量は1mm以内で一致しました。物理storeと描画済み位置を移動中に別時刻で読むと約8.46cmの差が出たため、停止と2描画フレームを待つ計測へ修正しています。この検査は実行中の遅延を保証しません。
+
+本番の個人テストルームでは、アイテムを読み込む前からCanvasクリック時に `WrongDocumentError: The root document of this element is not valid for pointer lock.` が発生しました。配信v2の配置プレビュー読込までは確認しましたが、床へ照準を向けて配置する操作が成立せず、装着・追従・解除の本番受入は未完了です。公式ローカルSDKでは同じブラウザ自動操作でPointerLockと歩行が成功しています。ユーザーによる手動開始が可能か確認待ちで、原因の帰属は確定していません。
+
+公式ローカルの自作骨格検証スクリプトではページ例外/非GETリクエストは0でした。VRM0のLookAtDegreeMap非対応警告があり、視線曲線は確認範囲外です。デモはフルVRMアニメーション・spring bone・XRiftのIKランタイムを再現していません。フレーム遅延、性能、タグ可読性、髪との接触は実機と人の確認が必要です。
 
 初期版の `docs/verification-2026-10-25.json` は当時の記録として保持しています。再実験は毎回新しい `artifacts/experiments/<時刻とID>/` へ保存し、基準結果を上書きしません。
 

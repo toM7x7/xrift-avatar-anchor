@@ -5,7 +5,7 @@ async (page)=>{
   await page.setViewportSize({width:1600,height:1000});await page.reload()
   await page.waitForFunction(()=>window.__sdkTagReadback?.items.length===2&&window.__sdkTagReadback.movement.isGrounded)
   const declaration=await page.evaluate(async()=>{const r=await fetch('/__xrift/world-items');return {status:r.status,...await r.json()}})
-  if(declaration.status!==200||declaration.items?.length!==1)throw Error('Official declaration proxy is not configured')
+  if(declaration.status!==200||!declaration.items?.includes('00000000-0000-4000-8000-000000000001'))throw Error('Official declaration proxy is not configured')
   const read=()=>page.evaluate(()=>window.__sdkTagActions.snapshot()),one=data=>data.items.find(i=>i.itemId==='tag-sdk-one'),two=data=>data.items.find(i=>i.itemId==='tag-sdk-two')
   const idle=await read()
   // Real SDK center-ray interaction, with a test-only explicit camera aim.
@@ -57,6 +57,6 @@ async (page)=>{
   await page.waitForFunction(()=>window.__sdkTagActions.snapshot().items.every(i=>i.phase==='idle'))
   const detached=await read()
   if(errors.length||nonGet.length)throw Error(JSON.stringify({errors,nonGet}))
-  return {tier:'official-DevEnvironment-with-authored-rig',sdk:'0.58.0',checks:{officialItemInjection:true,declarationProxy:true,nativeCenterRayEquip:true,nativePointerLock:locked,nativePhysicsWalk:true,follow:true,statusSwitch:true,twoPlacementIsolation:true,detach:true,reattach:true,missingHeadHidden:true,ambiguousHeadHidden:true,automaticScaleRecalibration:true,noPageErrors:true,noNonGetRequests:true},movement:{bodyDelta,headDelta,tagDelta,trackingDeltaErrorMm:Math.abs(headDelta-tagDelta)*1000},idle,equipped,moved,beforeMissing,missing,ambiguous,scales,detached,errors,nonGet,limitations:['Additional authored skinned avatar follows SDK movement; default SDK avatar has no skeleton.','Observer camera is test-only; SDK itself is first-person.','Single local user; no real multiplayer/Quest evidence.']}
+  return {tier:idle.delivery==='published-v2-federation'?'official-DevEnvironment-with-published-v2-and-authored-rig':'official-DevEnvironment-with-authored-rig',sdk:'0.58.0',checks:{officialItemInjection:idle.delivery!=='published-v2-federation',publishedFederation:idle.delivery==='published-v2-federation',declarationProxy:true,nativeCenterRayEquip:true,nativePointerLock:locked,nativePhysicsWalk:true,follow:true,statusSwitch:true,twoPlacementIsolation:true,detach:true,reattach:true,missingHeadHidden:true,ambiguousHeadHidden:true,automaticScaleRecalibration:true,noPageErrors:true,noNonGetRequests:true},movement:{bodyDelta,headDelta,tagDelta,trackingDeltaErrorMm:Math.abs(headDelta-tagDelta)*1000},idle,equipped,moved,beforeMissing,missing,ambiguous,scales,detached,errors,nonGet,limitations:['Additional authored skinned avatar follows SDK movement; default SDK avatar has no skeleton.','Observer camera is test-only; SDK itself is first-person.','Single local user; no real multiplayer/Quest evidence.']}
  }finally{page.off('pageerror',onError);page.off('request',onRequest)}
 }

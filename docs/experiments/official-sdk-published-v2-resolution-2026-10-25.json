@@ -1,0 +1,21 @@
+{
+  "status": 200,
+  "resolved": {
+    "id": "82fe0855-60d8-4880-9f88-f3c10276796c",
+    "name": "自動調整・頭上ステータスタグ【検証版】",
+    "sceneUrl": "https://assets.xrift.net/users/d84d700c-6b11-4497-8f2d-9abd4323e598/items/82fe0855-60d8-4880-9f88-f3c10276796c/27d88ad83458/remoteEntry.js",
+    "versionNumber": 2,
+    "status": "ACTIVE",
+    "owner": {
+      "id": "d84d700c-6b11-4497-8f2d-9abd4323e598",
+      "displayName": "toMo"
+    },
+    "permissions": {
+      "allowedDomains": [],
+      "allowedCodeRules": []
+    }
+  },
+  "loadedRemoteEntries": [
+    "https://assets.xrift.net/users/d84d700c-6b11-4497-8f2d-9abd4323e598/items/82fe0855-60d8-4880-9f88-f3c10276796c/27d88ad83458/remoteEntry.js"
+  ]
+}

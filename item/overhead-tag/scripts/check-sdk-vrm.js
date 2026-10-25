@@ -13,6 +13,10 @@ async(page)=>{
   if(Math.abs(gap-.12)>.003)throw Error('Head mesh gap differs from 12cm reference')
   await page.locator('canvas').click();await page.keyboard.down('w')
   try{await page.waitForFunction(z=>window.__sdkTagActions.snapshot().movement.position.z<z-.5,before.movement.position.z,{timeout:6000})}finally{await page.keyboard.up('w')}
+  // The physics store can advance ahead of the last rendered avatar/tag frame.
+  // Compare settled endpoints; this does not measure live frame latency.
+  await page.waitForFunction(()=>window.__sdkTagActions.snapshot().movement.horizontalSpeed===0)
+  await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))))
   const moved=await read();await page.evaluate(()=>document.exitPointerLock())
   const bodyDelta=moved.movement.position.z-before.movement.position.z,tagDelta=one(moved).position[2]-one(before).position[2]
   if(Math.abs(bodyDelta-tagDelta)>.001)throw Error('Loaded real model tag failed SDK walk tracking')
@@ -23,6 +27,6 @@ async(page)=>{
   await page.getByRole('button',{name:'1を外す',exact:true}).click()
   await page.waitForFunction(()=>window.__sdkTagActions.snapshot().items.find(i=>i.itemId==='tag-sdk-one')?.phase==='idle')
   if(errors.length)throw Error(JSON.stringify(errors))
-  return {tier:'official-DevEnvironment-with-local-real-vrm',modelId:before.modelId,checks:{automaticMeshCalibration:true,fixed12cmReference:true,nativeSDKWalk:true,tracking:true,detach:true,noPageErrors:true},gapM:gap,bodyDeltaM:bodyDelta,tagDeltaM:tagDelta,trackingDeltaErrorMm:Math.abs(bodyDelta-tagDelta)*1000,before,moved,detached:await read(),errors,privateCapture:'Ignored artifacts/sdk-vrm-<hash>-worn-private.png',limitations:['SDK owns physics, input, contexts and item loading. VRM pose bridge is additional local test code.','No real multiplayer or Quest evidence.']}
+  return {tier:'official-DevEnvironment-with-local-real-vrm',delivery:before.delivery,measurement:'Settled endpoints after physics stops and two render frames; not a live latency measurement.',modelId:before.modelId,checks:{automaticMeshCalibration:true,fixed12cmReference:true,nativeSDKWalk:true,tracking:true,detach:true,noPageErrors:true},gapM:gap,bodyDeltaM:bodyDelta,tagDeltaM:tagDelta,trackingDeltaErrorMm:Math.abs(bodyDelta-tagDelta)*1000,before,moved,detached:await read(),errors,privateCapture:'Ignored artifacts/sdk-vrm-<hash>-worn-private.png',limitations:['SDK owns physics, input, contexts and item loading. VRM pose bridge is additional local test code.','No real multiplayer or Quest evidence.']}
  }finally{page.off('pageerror',onError)}
 }
